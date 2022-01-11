@@ -1,6 +1,6 @@
 mirror:
     stage: mirror
-    image: node:alpine
+    image: node
     script:
         # GitHub
         - USERNAME=pektin-dolly
