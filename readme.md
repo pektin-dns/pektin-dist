@@ -1,7 +1,8 @@
 # Mirror to GitHub and GitLab
 
 ```yml
-include: https://git.y.gy/pektin/pektin-dist/-/raw/main/scripts/mirror.yml
+include:
+    - remote: https://git.y.gy/pektin/pektin-dist/-/raw/main/scripts/mirror.yml
 stages:
     - mirror
 ```
@@ -9,7 +10,8 @@ stages:
 # Build Image and Publish it to Docker
 
 ```yml
-include: https://git.y.gy/pektin/pektin-dist/-/raw/main/scripts/docker-build-and-publish.yml
+include:
+    - remote: https://git.y.gy/pektin/pektin-dist/-/raw/main/scripts/docker-build-and-publish.yml
 variables:
     IMAGE_NAME: coolImage # -> pektin/coolImage
 stages:
@@ -19,7 +21,8 @@ stages:
 # Run `yarn publish` and publish to NPM
 
 ```yml
-include: https://git.y.gy/pektin/pektin-dist/-/raw/main/scripts/npm-build-and-publish.yml
+include:
+    - remote: https://git.y.gy/pektin/pektin-dist/-/raw/main/scripts/npm-build-and-publish.yml
 stages:
     - npm-build-and-publish
 ```
