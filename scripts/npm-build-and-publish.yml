@@ -1,5 +1,5 @@
-build-and-publish-npm:
-    stage: build-and-publish-npm
+npm-build-and-publish:
+    stage: npm-build-and-publish
     image: node:alpine
     script:
         # publish to npm
