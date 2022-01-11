@@ -13,7 +13,7 @@ include:
 image: alpine
 
 variables:
-    IMAGE_NAME: CHANGEME
+    IMAGE_NAME:
 
 stages:
     - mirror
