@@ -4,7 +4,7 @@ mirror:
     script:
         # GitHub
         - USERNAME=pektin-dolly
-        - git config --global user.email "pektin-dolly@git.y.gy"
+        - git config --global user.email "pektin-dolly@y.gy"
         - git config --global user.name "pektin-dolly"
         - git checkout main
         - git commit --allow-empty -m "🐑 mirror [skip ci]"

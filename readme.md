@@ -1,5 +1,25 @@
 # Mirror to GitHub and GitLab
 
+git mirror and docker build
+
+```yml
+include:
+    - project: pektin/pektin-dist
+      ref: main
+      file:
+          - scripts/mirror.yml
+          - scripts/docker-build-and-publish.yml
+
+image: alpine
+
+variables:
+    IMAGE_NAME: CHANGEME
+
+stages:
+    - mirror
+    - docker-build-and-publish
+```
+
 ```yml
 include:
     - project: pektin/pektin-dist
