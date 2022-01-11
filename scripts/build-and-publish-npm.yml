@@ -1,0 +1,9 @@
+build-and-publish-npm:
+    stage: build-and-publish-npm
+    image: node:alpine
+    script:
+        # publish to npm
+        - yarn
+        - yarn publish
+        - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+        - npm publish --verbose --access public
