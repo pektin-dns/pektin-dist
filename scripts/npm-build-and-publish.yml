@@ -4,6 +4,6 @@ npm-build-and-publish:
     script:
         # publish to npm
         - yarn
-        - yarn publish
+        - yarn before-publish
         - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
         - npm publish --verbose --access public
