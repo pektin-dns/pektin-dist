@@ -6,7 +6,6 @@ mirror:
         - USERNAME=pektin-dolly
         - git config --global user.email "pektin-dolly@y.gy"
         - git config --global user.name "pektin-dolly"
-        - git switch origin/main
         - git commit --allow-empty -m "🐑 mirror [skip ci]"
         - git remote remove origin
         - git remote add origin https://${USERNAME}:${GITHUB_TOKEN}@github.com/pektin-dns/${CI_PROJECT_NAME}.git
