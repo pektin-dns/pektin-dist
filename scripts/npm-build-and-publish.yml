@@ -1,6 +1,6 @@
 npm-build-and-publish:
     stage: npm-build-and-publish
-    image: node:alpine
+    image: pektin/deno-nodejs-alpine
     script:
         # publish to npm
         - yarn
