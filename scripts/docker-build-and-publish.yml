@@ -4,6 +4,6 @@ docker-build-and-publish:
     before_script:
         - docker login -u "pektin" -p "${CI_REGISTRY_PASSWORD}"
     script:
-        - if [ "$IMAGE_NAME"=="ui" ]; then sed -i "s|VERSION|${CI_COMMIT_SHORT_SHA}|g" ./public/index.html; fi || true
+        - if [ "$IMAGE_NAME" = "ui" ]; then sed -i "s|VERSION|${CI_COMMIT_SHORT_SHA}|g" ./public/index.html; fi || true
         - docker build --pull -t "pektin/${IMAGE_NAME}" .
         - docker push "pektin/${IMAGE_NAME}"
