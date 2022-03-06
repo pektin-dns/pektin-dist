@@ -11,4 +11,4 @@ docker-build-and-publish:
             /kaniko/executor
             --context "${CI_PROJECT_DIR}"
             --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
-            --destination "pektin/${IMAGE_NAME}:latest"
+            --destination "${IMAGE_NAME}:latest"
