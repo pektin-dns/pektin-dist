@@ -11,4 +11,4 @@ docker-build-and-publish:
             /kaniko/executor
             --context "${CI_PROJECT_DIR}"
             --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
-            --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}"
+            --destination "https://hub.docker.com/pektin/${IMAGE_NAME}:${CI_COMMIT_TAG}"
